@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" >
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Familiar Map</title>
+<link rel="stylesheet" href="style/reset.css">
+<link rel="stylesheet" href="style/style.css">
+<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Roboto:500,300,700,400'>
+<!--[if lt IE 9]><script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="style/menu-hamburger.js"></script>
+
+<!-- Loading Bootstrap -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="./js/GoogleMapsApiFunctions.js"></script>
+<script type="text/javascript" src="./js/main.js"></script>
+
+<body>
+<div id="wrap">
+	<header>
+		<h2>Familiar Map</h2>
+		<div class="navBtn">
+			<button class="navIcon"><span class="iconLayer"></span></button>
+		<!-- /.navBtn --></div>
+		<div class="menu menuOff">
+			<ul>
+				<li>
+          	<input type="text" class="form-control" placeholder="Search" name="Search">
+          	<button type="submit" class="form-control">検索</button>
+				</li>
+
+				<li>
+					<button type="button" class="sidebar-menu-default">緊急情報</button>
+				</li>
+
+        <li>
+					<input type="text" class="form-control" placeholder="Date" id="datepicker" readonly>
+				</li>
+
+        <li>
+          <select class="form-control" name='category'>
+            <option>-カテゴリ-</option>
+            <option value="0">---</option>
+            <option value="1">イベント情報</option>
+            <option value="2">路線情報</option>
+            <option value="3">不審者情報</option>
+            <option value="4">全情報</option>
+          </select>
+        </li>
+
+				<li><select class="form-control" name='prefecture'>
+          <option>-都道府県-</option>
+          <option>----</option>
+          <option value="0">滋賀県</option>
+          <option value="1">大阪府</option>
+          <option value="2">奈良県</option>
+          <option value="3">和歌山県</option>
+          <option value="4">京都府</option>
+          <option value="5">三重県</option>
+        </select></li>
+
+				<li><select class="form-control" name='city'>
+          <option>-市区町村-</option>
+          <option>----</option>
+          <option value="0">綾部市</option>
+          <option value="1">京丹後市</option>
+          <option value="2">福知山市</option>
+          <option value="3">亀岡市</option>
+          <option value="4">舞鶴市</option>
+          <option value="5">宇治市</option>
+        </select>
+      </li>
+
+				<li><select class="form-control" name='district'>
+          <option>-地区-</option>
+          <option>----</option>
+          <option value="0">三笠小学校</option>
+          <option value="1">倉梯小学校</option>
+          <option value="2">倉梯第2小学校</option>
+          <option value="3">余保呂小学校</option>
+          <option value="4">志楽小学校</option>
+          <option value="5">朝来小学校</option>
+          <option value="6">大浦小学校</option>
+          <option value="7">中舞鶴小学校</option>
+          <option value="8">明倫小学校</option>
+          <option value="9">吉原小学校</option>
+          <option value="10">余内小学校</option>
+          <option value="11">福井小学校</option>
+          <option value="12">中筋小学校</option>
+          <option value="13">高原小学校</option>
+          <option value="14">由良川小学校</option>
+          <option value="15">岡田小学校</option>
+          <option value="16">池内小学校</option>
+          <option value="17">矢之助町</option>
+          <option value="18">新舞鶴小学校</option>
+       
+          
+        </select>
+      </li>
+			</ul>
+		<!-- / .menu menuOff --></div>
+	</header>
+		<div id = "gmap" style = "width: 100%; height :100%;"></div>
+<!-- / #wrap --></div>
+</body>
